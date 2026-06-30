@@ -1,0 +1,678 @@
+<!--
+
+# Chapter 2 — How the Web Works (Client, Server, Browser, HTML/CSS/JS)
+
+Before writing websites, you must understand **how the internet and websites actually work**.
+
+Because when you start working with Node.js, Express.js, MongoDB, APIs, authentication, etc., this chapter becomes the foundation.
+
+---
+
+# 1. What is a Website?
+
+A website is a collection of webpages connected together.
+
+Example:
+
+* Homepage
+* About page
+* Contact page
+* Login page
+
+Think of a website like a book:
+
+Book:
+
+* Many pages
+
+Website:
+
+* Many webpages
+
+Example:
+A site like Google has:
+
+* Search page
+* Gmail
+* Drive
+* Maps
+
+All are webpages.
+
+---
+
+# 2. What Happens When You Open a Website?
+
+Suppose you type:
+
+`www.google.com`
+
+Process:
+
+### Step 1: Browser sends request
+
+Your browser asks:
+
+"Give me Google’s webpage."
+
+This is called a **request**.
+
+Example:
+You = customer
+Restaurant = website server
+
+You ask for food.
+
+That asking = request.
+
+---
+
+### Step 2: DNS finds server
+
+Browser does not understand names.
+
+It needs IP.
+
+Example:
+
+Google.com → 142.250.xx.xx
+
+DNS converts:
+
+Domain → IP
+
+Like phonebook.
+
+Example:
+"Rahul" → Phone number
+
+Same:
+
+Google.com → IP address
+
+---
+
+### Step 3: Server receives request
+
+The server receives:
+
+"User wants homepage."
+
+Server is a computer storing website files.
+
+Files:
+
+* HTML
+* CSS
+* JavaScript
+* Images
+* Database data
+
+---
+
+### Step 4: Server sends response
+
+Server sends files back.
+
+This is called **response**.
+
+Example:
+
+Request:
+"Give me homepage."
+
+Response:
+"Here it is."
+
+---
+
+### Step 5: Browser renders webpage
+
+Browser reads:
+
+* HTML
+* CSS
+* JavaScript
+
+And shows the webpage.
+
+Final:
+You see website.
+
+Flow:
+
+User → Browser → DNS → Server → Browser → Screen
+
+Very important.
+
+---
+
+# 3. Client and Server
+
+This is the most important concept in MERN.
+
+---
+
+## Client
+
+Client means the user side.
+
+Examples:
+
+* Browser
+* Mobile app
+* Desktop app
+
+Client requests data.
+
+Example:
+Chrome browser.
+
+When you open:
+
+`youtube.com`
+
+Chrome is client.
+
+---
+
+## Server
+
+Server provides data.
+
+It handles:
+
+* requests
+* database
+* authentication
+* business logic
+
+Example:
+
+You ask for YouTube videos.
+
+Server sends video data.
+
+---
+
+## Example
+
+Instagram:
+
+Client:
+App or browser
+
+Server:
+Instagram servers
+
+Database:
+Stores users, posts, comments
+
+Flow:
+
+User opens app
+↓
+Client sends request
+↓
+Server processes
+↓
+Database fetches data
+↓
+Server sends response
+↓
+Client displays data
+
+---
+
+# 4. Client-Server Architecture
+
+Architecture means system design.
+
+Basic architecture:
+
+```text
+Client → Server → Database
+```
+
+Example:
+
+Login:
+
+```text
+User enters email/password
+↓
+Client sends login request
+↓
+Server checks database
+↓
+Database returns user
+↓
+Server verifies password
+↓
+Server sends response
+↓
+Client logs in
+```
+
+This is exactly how your projects like CoachCode.ai work.
+
+---
+
+# 5. Frontend vs Backend
+
+## Frontend
+
+What user sees.
+
+Built with:
+
+* HTML
+* CSS
+* JavaScript
+* React
+
+Examples:
+
+* buttons
+* navbar
+* cards
+* forms
+
+Example:
+
+```html id="f1d8ka"
+<button>Login</button>
+```
+
+Visible to user.
+
+---
+
+## Backend
+
+Works behind scenes.
+
+Built with:
+
+* Node.js
+* Express.js
+* Java
+* Spring Boot
+
+Handles:
+
+* database
+* authentication
+* APIs
+
+Example:
+
+```javascript id="p3k9lw"
+app.post("/login", (req, res) => {
+   res.send("Login successful");
+});
+```
+
+User cannot see backend.
+
+---
+
+# 6. Role of HTML, CSS, JavaScript
+
+These three are web pillars.
+
+---
+
+## HTML = Structure
+
+Example:
+
+```html id="m2x7bz"
+<h1>Welcome</h1>
+<p>Hello User</p>
+<button>Click</button>
+```
+
+Creates:
+
+* heading
+* paragraph
+* button
+
+No design.
+
+---
+
+## CSS = Styling
+
+Example:
+
+```css id="q7n5ta"
+h1 {
+  color: red;
+}
+```
+
+Makes:
+
+* colors
+* spacing
+* layouts
+* animations
+
+---
+
+## JavaScript = Functionality
+
+Example:
+
+```javascript id="z4r1uy"
+button.onclick = function() {
+ alert("Clicked");
+}
+```
+
+Adds:
+
+* click events
+* API calls
+* validations
+
+---
+
+Together:
+
+HTML:
+Skeleton
+
+CSS:
+Beauty
+
+JavaScript:
+Brain
+
+---
+
+# 7. Browser Rendering Process
+
+Important.
+
+When browser gets files:
+
+---
+
+## Step 1: Parse HTML
+
+Example:
+
+```html id="t8v2pm"
+<h1>Hello</h1>
+```
+
+Browser reads it.
+
+Creates DOM.
+
+DOM:
+
+```text
+Document
+└── h1
+    └── Hello
+```
+
+---
+
+## Step 2: Parse CSS
+
+Example:
+
+```css id="u6g4we"
+h1 {
+ color: blue;
+}
+```
+
+Creates CSSOM.
+
+CSS Object Model.
+
+---
+
+## Step 3: Combine DOM + CSSOM
+
+Creates Render Tree.
+
+Example:
+
+```text
+h1 → blue → visible
+```
+
+---
+
+## Step 4: Layout
+
+Browser calculates:
+
+* width
+* height
+* position
+
+Example:
+Where heading should appear.
+
+---
+
+## Step 5: Paint
+
+Browser draws pixels.
+
+Now webpage becomes visible.
+
+Flow:
+
+HTML → DOM
+CSS → CSSOM
+DOM + CSSOM → Render Tree
+Layout → Paint
+
+Very important for optimization.
+
+---
+
+# 8. Static vs Dynamic Website
+
+---
+
+## Static Website
+
+Fixed content.
+
+Same for everyone.
+
+Example:
+
+Portfolio website.
+
+HTML:
+
+```html id="v9l2sx"
+<h1>My Portfolio</h1>
+```
+
+Always same.
+
+---
+
+## Dynamic Website
+
+Changes based on user/data.
+
+Example:
+Instagram feed.
+
+Your feed ≠ my feed.
+
+Backend + Database required.
+
+Example:
+
+```javascript id="n5q7cd"
+res.send(userPosts);
+```
+
+Data changes.
+
+---
+
+# 9. HTTP and HTTPS
+
+Used for communication.
+
+HTTP:
+HyperText Transfer Protocol
+
+Example:
+
+```text
+http://example.com
+```
+
+Not secure.
+
+---
+
+HTTPS:
+Secure version.
+
+Example:
+
+```text
+https://example.com
+```
+
+Encrypted.
+
+Use HTTPS always.
+
+---
+
+# 10. Request Methods
+
+Important for backend.
+
+GET:
+Fetch data
+
+Example:
+Get all users
+
+---
+
+POST:
+Send data
+
+Example:
+Create account
+
+---
+
+PUT:
+Update data
+
+Example:
+Update profile
+
+---
+
+DELETE:
+Delete data
+
+Example:
+Delete post
+
+This is CRUD.
+
+Create → POST
+Read → GET
+Update → PUT
+Delete → DELETE
+
+Very important for MERN.
+
+---
+
+# Real World Example (Instagram Login)
+
+HTML form:
+
+```html id="a7m4ke"
+<form>
+  <input type="email">
+  <input type="password">
+  <button>Login</button>
+</form>
+```
+
+User submits.
+
+Client sends POST request.
+
+Server:
+
+```javascript id="k9t1wv"
+app.post("/login", (req,res)=>{
+   // check database
+});
+```
+
+Database checks.
+
+Server returns:
+
+"Login success"
+
+Browser shows dashboard.
+
+Full web cycle.
+
+---
+
+# Revision Notes
+
+Website = collection of webpages
+
+Flow:
+Browser → DNS → Server → Response → Browser
+
+Client = user side
+
+Server = provider side
+
+Frontend:
+HTML + CSS + JS
+
+Backend:
+Server + Database
+
+HTML = structure
+
+CSS = styling
+
+JavaScript = functionality
+
+HTTP methods:
+GET
+POST
+PUT
+DELETE
+
+Browser rendering:
+DOM
+CSSOM
+Render Tree
+Layout
+Paint
+
+-->
