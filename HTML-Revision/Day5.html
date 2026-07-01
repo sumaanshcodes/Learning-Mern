@@ -1,0 +1,617 @@
+<!--
+
+# Chapter 5 — Headings, Paragraphs, Line Break, Horizontal Rule (Complete Deep Dive)
+
+This chapter covers the first real content tags.
+
+Topics:
+
+* Heading tags (`<h1>` to `<h6>`)
+* Paragraph tag (`<p>`)
+* Line break tag (`<br>`)
+* Horizontal rule tag (`<hr>`)
+
+These are used in almost every webpage.
+
+Example:
+Blogs, portfolios, landing pages, articles, documentation.
+
+---
+
+# 1. Heading Tags (`<h1>` to `<h6>`)
+
+Heading tags define titles and sub-titles.
+
+HTML provides 6 levels of headings.
+
+Syntax:
+
+```html id="h1ex01"
+<h1>Main Heading</h1>
+<h2>Sub Heading</h2>
+<h3>Small Heading</h3>
+<h4>Smaller Heading</h4>
+<h5>Tiny Heading</h5>
+<h6>Smallest Heading</h6>
+```
+
+---
+
+## Purpose of Headings
+
+Used to:
+
+* Organize content
+* Improve readability
+* Improve SEO
+* Help accessibility
+
+Think like a book:
+
+Book Title → Chapter → Topic → Subtopic
+
+Same structure:
+
+```text id="headstruct"
+h1 → Main title
+h2 → Main section
+h3 → Sub section
+h4 → Minor section
+h5 → Small topic
+h6 → Smallest topic
+```
+
+---
+
+## Importance of Each Heading
+
+### `<h1>`
+
+Most important heading.
+
+Usually used once.
+
+Example:
+Website title.
+
+---
+
+### `<h2>`
+
+Subheading under h1.
+
+---
+
+### `<h3>`
+
+Subheading under h2.
+
+And so on.
+
+---
+
+# Example 1 (Headings)
+
+```html id="headex1"
+<h1>Web Development</h1>
+<h2>Frontend</h2>
+<h3>HTML</h3>
+<h3>CSS</h3>
+<h2>Backend</h2>
+<h3>Node.js</h3>
+```
+
+Output:
+
+```text id="headout1"
+Web Development       (largest)
+Frontend
+HTML
+CSS
+Backend
+Node.js
+```
+
+Size decreases as level increases.
+
+---
+
+# Example 2 (Portfolio Structure)
+
+```html id="headex2"
+<h1>Sumansh Yadav</h1>
+<h2>About Me</h2>
+<h2>Skills</h2>
+<h3>HTML</h3>
+<h3>CSS</h3>
+<h3>JavaScript</h3>
+```
+
+Output:
+
+```text id="headout2"
+Sumansh Yadav
+About Me
+Skills
+HTML
+CSS
+JavaScript
+```
+
+Structured profile.
+
+---
+
+# Rules of Headings
+
+## Rule 1: Use in order
+
+Correct:
+
+```html id="headrule1"
+<h1>Main</h1>
+<h2>Sub</h2>
+<h3>Topic</h3>
+```
+
+Wrong:
+
+```html id="headrule2"
+<h1>Main</h1>
+<h4>Topic</h4>
+```
+
+Skipping levels is bad practice.
+
+---
+
+## Rule 2: Only one h1 (recommended)
+
+Good:
+
+```html id="headrule3"
+<h1>My Website</h1>
+```
+
+Avoid multiple h1s unless needed.
+
+---
+
+## Rule 3: Don’t use headings for styling
+
+Wrong:
+
+```html id="headrule4"
+<h1>This text is big</h1>
+```
+
+Use CSS for size.
+
+Headings are for meaning.
+
+---
+
+# SEO Importance of Headings
+
+Search engines like Google read headings.
+
+Example:
+
+Good:
+
+```html id="seo1"
+<h1>Learn HTML</h1>
+<h2>HTML Basics</h2>
+```
+
+Bad:
+
+```html id="seo2"
+<div>Learn HTML</div>
+```
+
+Search engines understand headings better.
+
+---
+
+# 2. Paragraph Tag (`<p>`)
+
+Used to write paragraphs.
+
+Syntax:
+
+```html id="pex01"
+<p>This is a paragraph.</p>
+```
+
+Paragraphs organize text.
+
+Without paragraphs:
+Text becomes messy.
+
+---
+
+## Features of Paragraph
+
+* Block-level element
+* Starts on new line
+* Adds default spacing
+
+Important.
+
+---
+
+# Example 1 (Paragraph)
+
+```html id="pex2"
+<p>Hello, I am learning HTML.</p>
+<p>HTML is the foundation of web development.</p>
+```
+
+Output:
+
+```text id="pout1"
+Hello, I am learning HTML.
+
+HTML is the foundation of web development.
+```
+
+Separate blocks.
+
+---
+
+# Example 2 (About Section)
+
+```html id="pex3"
+<p>My name is Sumansh Yadav.</p>
+<p>I am a B.Tech student at GLA University.</p>
+```
+
+Output:
+
+```text id="pout2"
+My name is Sumansh Yadav.
+
+I am a B.Tech student at GLA University.
+```
+
+---
+
+# Important Point About Paragraph
+
+HTML ignores extra spaces.
+
+Example:
+
+```html id="spaceex"
+<p>Hello       World</p>
+```
+
+Output:
+
+```text id="spaceout"
+Hello World
+```
+
+Multiple spaces become one.
+
+Important.
+
+---
+
+# Paragraph cannot contain block elements (avoid)
+
+Wrong:
+
+```html id="wrongp"
+<p>
+   <h1>Hello</h1>
+</p>
+```
+
+Bad nesting.
+
+---
+
+# 3. Line Break Tag (`<br>`)
+
+Used to break line without starting a new paragraph.
+
+Syntax:
+
+```html id="brex1"
+<br>
+```
+
+Self-closing tag.
+
+No closing.
+
+---
+
+Difference:
+
+`<p>` = new paragraph
+`<br>` = new line
+
+---
+
+# Example 1 (Address)
+
+```html id="brex2"
+<p>
+House No 21<br>
+Mathura<br>
+Uttar Pradesh
+</p>
+```
+
+Output:
+
+```text id="brout1"
+House No 21
+Mathura
+Uttar Pradesh
+```
+
+Useful for addresses.
+
+---
+
+# Example 2 (Poem)
+
+```html id="brex3"
+<p>
+Twinkle twinkle little star<br>
+How I wonder what you are<br>
+Up above the world so high
+</p>
+```
+
+Output:
+
+```text id="brout2"
+Twinkle twinkle little star
+How I wonder what you are
+Up above the world so high
+```
+
+Useful in poems.
+
+---
+
+# When to use `<br>`
+
+Use for:
+
+* addresses
+* poems
+* songs
+* formatted text
+
+Avoid overusing.
+
+Wrong:
+
+```html id="brwrong"
+<p>Hello</p><br><br><br><br>
+```
+
+Use CSS for spacing.
+
+---
+
+# 4. Horizontal Rule (`<hr>`)
+
+Used to create thematic break.
+
+Syntax:
+
+```html id="hrex1"
+<hr>
+```
+
+Creates horizontal line.
+
+Self-closing.
+
+---
+
+Uses:
+
+* separate sections
+* divide content
+* visual break
+
+---
+
+# Example 1 (Section Divider)
+
+```html id="hrex2"
+<h1>About Me</h1>
+<p>I am a developer.</p>
+
+<hr>
+
+<h1>Skills</h1>
+<p>HTML, CSS, JavaScript</p>
+```
+
+Output:
+
+```text id="hrout1"
+About Me
+I am a developer
+--------------------
+Skills
+HTML, CSS, JavaScript
+```
+
+---
+
+# Example 2 (Article)
+
+```html id="hrex3"
+<h2>Introduction</h2>
+<p>This is intro.</p>
+
+<hr>
+
+<h2>Conclusion</h2>
+<p>This is conclusion.</p>
+```
+
+Output:
+
+```text id="hrout2"
+Introduction
+This is intro
+--------------------
+Conclusion
+This is conclusion
+```
+
+---
+
+# Combined Example (All Together)
+
+```html id="combine1"
+<h1>My Resume</h1>
+
+<p>My name is Sumansh Yadav.</p>
+
+<hr>
+
+<h2>Education</h2>
+<p>B.Tech in AI & FullStack</p>
+
+<hr>
+
+<h2>Address</h2>
+<p>
+Mathura<br>
+Uttar Pradesh<br>
+India
+</p>
+```
+
+Output:
+
+```text id="combineout"
+My Resume
+
+My name is Sumansh Yadav.
+
+--------------------
+
+Education
+B.Tech in AI & FullStack
+
+--------------------
+
+Address
+Mathura
+Uttar Pradesh
+India
+```
+
+---
+
+# Common Mistakes
+
+---
+
+## Mistake 1: Using headings randomly
+
+Wrong:
+
+```html id="mist1"
+<h4>Main Heading</h4>
+```
+
+Use h1 first.
+
+---
+
+## Mistake 2: Using br for spacing
+
+Wrong:
+
+```html id="mist2"
+<p>Hello</p>
+<br><br><br>
+```
+
+Bad.
+
+---
+
+## Mistake 3: Writing huge text without paragraphs
+
+Wrong:
+
+```html id="mist3"
+This is long content...
+```
+
+Use:
+
+```html id="mist4"
+<p>This is long content...</p>
+```
+
+---
+
+## Mistake 4: Using hr everywhere
+
+Bad if overused.
+
+Use only for section separation.
+
+---
+
+# Quick Comparison
+
+| Tag              | Purpose         |
+| ---------------- | --------------- |
+| `<h1>` to `<h6>` | Headings        |
+| `<p>`            | Paragraph       |
+| `<br>`           | Line break      |
+| `<hr>`           | Section divider |
+
+---
+
+# Revision Notes (Write These)
+
+Headings:
+
+* h1 to h6
+* h1 most important
+* h6 least important
+* Use in order
+
+Paragraph:
+
+* Used for text blocks
+* Block-level element
+
+Line Break:
+
+* Breaks line
+* Self-closing
+
+Horizontal Rule:
+
+* Creates divider line
+* Self-closing
+
+Important:
+
+* Don’t skip heading order
+* Don’t use br for spacing
+* Use p for text organization
+* hr for section separation
+
+---
+
+-->
