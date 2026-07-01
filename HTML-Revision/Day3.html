@@ -1,0 +1,584 @@
+<!--
+
+# Chapter 3 — Setting Up Environment + First HTML File + Basic Rules of HTML
+
+Before learning tags, you must set up a proper environment.
+
+Because professional developers don’t just “write code”; they create a proper workspace.
+
+This chapter is important because this same setup will later be used for React, Node.js, and full MERN projects.
+
+---
+
+# 1. What do we need to write HTML?
+
+Minimum things:
+
+* Text editor
+* Browser
+* Project folder
+
+That’s it.
+
+HTML is simple.
+
+You don’t need:
+
+* compiler
+* interpreter
+* installation
+
+Because browsers already understand HTML.
+
+---
+
+# 2. Choosing a Text Editor
+
+A text editor is software where we write code.
+
+Examples:
+
+* Visual Studio Code (best)
+* Sublime Text
+* Notepad++
+
+Recommended:
+**VS Code**
+
+Why?
+
+* Lightweight
+* Fast
+* Extensions support
+* Live preview
+* Auto suggestions
+* Best for MERN
+
+---
+
+# 3. Installing VS Code
+
+Steps:
+
+1. Go to official website:
+
+[Visual Studio Code](https://code.visualstudio.com?utm_source=chatgpt.com)
+
+2. Download
+3. Install
+4. Open it
+
+After opening:
+
+You’ll see:
+
+* Explorer
+* Search
+* Source control
+* Extensions
+
+Important.
+
+---
+
+# 4. Important VS Code Extensions
+
+Install these:
+
+### Live Server
+
+Purpose:
+Runs HTML in browser automatically.
+
+Search:
+Live Server
+
+Install.
+
+Very important.
+
+---
+
+### Prettier
+
+Purpose:
+Formats code.
+
+Example:
+
+Bad:
+
+```html id="v3n8ka"
+<h1>Hello</h1><p>World</p>
+```
+
+Formatted:
+
+```html id="b7m2pw"
+<h1>Hello</h1>
+<p>World</p>
+```
+
+---
+
+### Auto Rename Tag
+
+Purpose:
+Changes opening and closing tags together.
+
+Example:
+
+Change:
+
+```html id="m8q5xz"
+<h1></h1>
+```
+
+To:
+
+```html id="d2k7ul"
+<h2></h2>
+```
+
+Automatically.
+
+---
+
+# 5. Browser
+
+Browser reads HTML.
+
+Examples:
+
+* Google Chrome
+* Microsoft Edge
+* Mozilla Firefox
+
+Recommended:
+Chrome
+
+Why?
+
+Better DevTools.
+
+---
+
+# 6. Project Folder Structure
+
+Always create organized folders.
+
+Bad:
+
+```text id="n5c8ve"
+Desktop
+   file1.html
+   file2.html
+   image1.png
+   random.txt
+```
+
+Mess.
+
+---
+
+Good:
+
+```text id="f7w1za"
+my-first-project/
+│── index.html
+│── about.html
+│── contact.html
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
+│
+└── images/
+    └── logo.png
+```
+
+Professional.
+
+Rule:
+Keep things organized.
+
+---
+
+# 7. Creating Your First Project
+
+Create folder:
+
+```text id="r4x9jm"
+HTML Practice
+```
+
+Inside:
+
+Create:
+
+```text id="q8d2lc"
+index.html
+```
+
+Important:
+Homepage is usually:
+
+`index.html`
+
+Default file.
+
+---
+
+# 8. What is .html Extension?
+
+Extension tells file type.
+
+Example:
+
+```text id="j7n3ak"
+index.html
+```
+
+Means:
+This file contains HTML.
+
+Browser understands it.
+
+Without `.html`:
+
+Browser won’t treat it as webpage.
+
+---
+
+# 9. Creating First HTML File
+
+Open VS Code.
+
+Open folder.
+
+Create:
+
+```text id="t9v6ps"
+index.html
+```
+
+Type:
+
+```html id="w3f8km"
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Page</title>
+</head>
+<body>
+    Hello World
+</body>
+</html>
+```
+
+Save:
+Ctrl + S
+
+Done.
+
+---
+
+# 10. Running HTML File
+
+Method 1:
+
+Double click file.
+
+Browser opens.
+
+---
+
+Method 2 (best):
+
+Use Live Server.
+
+Right click:
+
+Open with Live Server.
+
+URL:
+
+```text id="e5k2zr"
+http://127.0.0.1:5500/index.html
+```
+
+Now changes update automatically.
+
+Best for development.
+
+---
+
+# 11. Emmet (Very Important)
+
+Emmet saves time.
+
+Example:
+
+Type:
+
+```text id="a6m8qp"
+!
+```
+
+Press Enter.
+
+Auto generates:
+
+```html id="u2d4xn"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+```
+
+Magic.
+
+Use it always.
+
+---
+
+More shortcuts:
+
+Type:
+
+```text id="k4z7bt"
+h1
+```
+
+Press Tab:
+
+```html id="g8x1lv"
+<h1></h1>
+```
+
+---
+
+Type:
+
+```text id="s2n9cw"
+ul>li*5
+```
+
+Press Tab:
+
+```html id="p6m3qy"
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+```
+
+Powerful.
+
+---
+
+# 12. Basic Rules of HTML
+
+Important.
+
+---
+
+## Rule 1: Use Proper Nesting
+
+Correct:
+
+```html id="m1v8er"
+<p><b>Hello</b></p>
+```
+
+Wrong:
+
+```html id="x7t3fa"
+<p><b>Hello</p></b>
+```
+
+Always close inside-out.
+
+---
+
+## Rule 2: Close Tags
+
+Correct:
+
+```html id="l4w2qn"
+<p>Hello</p>
+```
+
+Wrong:
+
+```html id="c8z5ku"
+<p>Hello
+```
+
+Some tags are self-closing.
+
+Example:
+
+```html id="h2d9my"
+<br>
+<img>
+<hr>
+```
+
+---
+
+## Rule 3: Use Lowercase
+
+Good:
+
+```html id="r9k4tx"
+<h1>Hello</h1>
+```
+
+Bad:
+
+```html id="n6b1qe"
+<H1>Hello</H1>
+```
+
+Lowercase is standard.
+
+---
+
+## Rule 4: Use Quotes for Attributes
+
+Correct:
+
+```html id="j3m7vs"
+<img src="cat.jpg">
+```
+
+Wrong:
+
+```html id="w8p2ld"
+<img src=cat.jpg>
+```
+
+Use quotes.
+
+---
+
+## Rule 5: Proper Indentation
+
+Good:
+
+```html id="f1z9kn"
+<body>
+    <h1>Hello</h1>
+    <p>World</p>
+</body>
+```
+
+Bad:
+
+```html id="q5x3up"
+<body><h1>Hello</h1><p>World</p></body>
+```
+
+Readable code matters.
+
+---
+
+# 13. Comments in HTML
+
+Used for notes.
+
+Syntax:
+
+```html id="v6n2ac"
+<!-- This is a comment -->
+```
+
+Browser ignores it.
+
+Example:
+
+```html id="b4q8je"
+<!-- Navbar starts -->
+<nav></nav>
+```
+
+Useful in large projects.
+
+---
+
+# 14. Practice Example
+
+Make this:
+
+```html id="y9m1tg"
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+</head>
+<body>
+    <h1>Sumansh Yadav</h1>
+    <p>I am learning HTML.</p>
+</body>
+</html>
+```
+
+Run it.
+
+Observe:
+
+* title in tab
+* content in body
+
+---
+
+# Revision Notes
+
+Need:
+
+* VS Code
+* Browser
+* Project folder
+
+Important extensions:
+
+* Live Server
+* Prettier
+* Auto Rename Tag
+
+Main file:
+index.html
+
+Use:
+Emmet
+
+Basic rules:
+
+* Proper nesting
+* Close tags
+* Lowercase tags
+* Quotes in attributes
+* Proper indentation
+
+Comment syntax:
+
+```html id="u5w8qp"
+<!-- comment -->
+```
+
+---
+
+-->
