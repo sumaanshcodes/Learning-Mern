@@ -1,0 +1,679 @@
+<!--
+
+# Chapter 6 — Text Formatting Tags (Complete Deep Dive)
+
+In this chapter, we will learn how to format text.
+
+Text formatting makes content:
+
+* readable
+* attractive
+* meaningful
+* structured
+
+These tags are used in:
+
+* blogs
+* articles
+* notes
+* documentation
+* forms
+* product descriptions
+
+Topics:
+
+* `<b>`
+* `<strong>`
+* `<i>`
+* `<em>`
+* `<u>`
+* `<mark>`
+* `<small>`
+* `<del>`
+* `<ins>`
+* `<sub>`
+* `<sup>`
+
+Very important.
+
+---
+
+# 1. Bold Tag (`<b>`)
+
+Used to make text bold.
+
+Syntax:
+
+```html id="b1"
+<b>Hello World</b>
+```
+
+Output:
+
+**Hello World**
+
+---
+
+Important:
+
+`<b>` only changes appearance.
+
+No semantic meaning.
+
+Browser simply makes text bold.
+
+---
+
+## Example 1
+
+```html id="b2"
+<p>My name is <b>Sumansh</b></p>
+```
+
+Output:
+
+My name is **Sumansh**
+
+---
+
+## Example 2
+
+```html id="b3"
+<p>This is a <b>very important</b> message.</p>
+```
+
+Output:
+
+This is a **very important** message.
+
+---
+
+When to use:
+
+Use when only visual boldness is needed.
+
+---
+
+# 2. Strong Tag (`<strong>`)
+
+Also makes text bold.
+
+Syntax:
+
+```html id="s1"
+<strong>Warning!</strong>
+```
+
+Output:
+
+**Warning!**
+
+Looks same as `<b>`.
+
+But important difference:
+
+`<strong>` adds semantic importance.
+
+Search engines and screen readers understand it.
+
+---
+
+Difference:
+
+`<b>` = only style
+`<strong>` = importance + style
+
+---
+
+## Example 1
+
+```html id="s2"
+<p><strong>Password is required.</strong></p>
+```
+
+Output:
+
+**Password is required.**
+
+---
+
+## Example 2
+
+```html id="s3"
+<p>Read the <strong>instructions carefully</strong>.</p>
+```
+
+Output:
+
+Read the **instructions carefully**.
+
+---
+
+Best practice:
+
+Prefer `<strong>` over `<b>` for important text.
+
+---
+
+# 3. Italic Tag (`<i>`)
+
+Makes text italic.
+
+Syntax:
+
+```html id="i1"
+<i>Hello</i>
+```
+
+Output:
+
+*Hello*
+
+---
+
+Used for:
+
+* foreign words
+* book names
+* thoughts
+
+No semantic importance.
+
+---
+
+## Example 1
+
+```html id="i2"
+<p>I love <i>coding</i>.</p>
+```
+
+Output:
+
+I love *coding*.
+
+---
+
+## Example 2
+
+```html id="i3"
+<p>The book <i>Atomic Habits</i> is amazing.</p>
+```
+
+Output:
+
+The book *Atomic Habits* is amazing.
+
+---
+
+# 4. Emphasis Tag (`<em>`)
+
+Also italic.
+
+Syntax:
+
+```html id="em1"
+<em>Important</em>
+```
+
+Output:
+
+*Important*
+
+Difference:
+
+`<em>` gives semantic emphasis.
+
+Screen readers stress it.
+
+---
+
+Difference:
+
+`<i>` = style only
+`<em>` = meaning + style
+
+---
+
+## Example 1
+
+```html id="em2"
+<p>You <em>must</em> complete this.</p>
+```
+
+Output:
+
+You *must* complete this.
+
+---
+
+## Example 2
+
+```html id="em3"
+<p>This is <em>really</em> good.</p>
+```
+
+Output:
+
+This is *really* good.
+
+---
+
+Best practice:
+
+Use `<em>` when emphasis matters.
+
+---
+
+# 5. Underline Tag (`<u>`)
+
+Underlines text.
+
+Syntax:
+
+```html id="u1"
+<u>Hello</u>
+```
+
+Output:
+
+<u>Hello</u>
+
+---
+
+Used for highlighting.
+
+Be careful:
+Underlined text often looks like a link.
+
+---
+
+## Example 1
+
+```html id="u2"
+<p><u>Important Notice</u></p>
+```
+
+Output:
+
+<u>Important Notice</u>
+
+---
+
+## Example 2
+
+```html id="u3"
+<p>Your exam date is <u>July 15</u>.</p>
+```
+
+Output:
+
+Your exam date is <u>July 15</u>.
+
+---
+
+# 6. Mark Tag (`<mark>`)
+
+Highlights text.
+
+Syntax:
+
+```html id="m1"
+<mark>HTML</mark>
+```
+
+Output:
+
+<mark>HTML</mark>
+
+Default background = yellow.
+
+Used for search highlights.
+
+---
+
+## Example 1
+
+```html id="m2"
+<p>Learn <mark>HTML</mark> first.</p>
+```
+
+Output:
+
+Learn <mark>HTML</mark> first.
+
+---
+
+## Example 2
+
+```html id="m3"
+<p>This topic is <mark>very important</mark>.</p>
+```
+
+Output:
+
+This topic is <mark>very important</mark>.
+
+---
+
+# 7. Small Tag (`<small>`)
+
+Makes text smaller.
+
+Syntax:
+
+```html id="sm1"
+<small>Terms and conditions apply.</small>
+```
+
+Output:
+
+<small>Terms and conditions apply.</small>
+
+Used for:
+
+* copyright
+* disclaimers
+* notes
+
+---
+
+## Example 1
+
+```html id="sm2"
+<p>Price: ₹500 <small>excluding tax</small></p>
+```
+
+Output:
+
+Price: ₹500 <small>excluding tax</small>
+
+---
+
+## Example 2
+
+```html id="sm3"
+<small>© 2026 All rights reserved.</small>
+```
+
+Output:
+
+<small>© 2026 All rights reserved.</small>
+
+---
+
+# 8. Delete Tag (`<del>`)
+
+Shows deleted text.
+
+Syntax:
+
+```html id="d1"
+<del>₹999</del>
+```
+
+Output:
+
+<del>₹999</del>
+
+Used for old prices.
+
+---
+
+## Example 1
+
+```html id="d2"
+<p>Old Price: <del>₹1000</del></p>
+```
+
+Output:
+
+Old Price: <del>₹1000</del>
+
+---
+
+## Example 2
+
+```html id="d3"
+<p>This task is <del>cancelled</del>.</p>
+```
+
+Output:
+
+This task is <del>cancelled</del>.
+
+---
+
+# 9. Insert Tag (`<ins>`)
+
+Shows inserted/new text.
+
+Syntax:
+
+```html id="ins1"
+<ins>₹799</ins>
+```
+
+Output:
+
+<ins>₹799</ins>
+
+Usually underlined.
+
+Used with `<del>`.
+
+---
+
+## Example 1
+
+```html id="ins2"
+<p>New Price: <ins>₹700</ins></p>
+```
+
+Output:
+
+New Price: <ins>₹700</ins>
+
+---
+
+## Example 2
+
+```html id="ins3"
+<p>Updated date: <ins>10 July</ins></p>
+```
+
+Output:
+
+Updated date: <ins>10 July</ins>
+
+---
+
+# 10. Subscript Tag (`<sub>`)
+
+Displays text below normal line.
+
+Syntax:
+
+```html id="sub1"
+H<sub>2</sub>O
+```
+
+Output:
+
+H₂O
+
+Used in:
+
+* chemistry
+* formulas
+
+---
+
+## Example 1
+
+```html id="sub2"
+CO<sub>2</sub>
+```
+
+Output:
+
+CO₂
+
+---
+
+## Example 2
+
+```html id="sub3"
+H<sub>2</sub>SO<sub>4</sub>
+```
+
+Output:
+
+H₂SO₄
+
+---
+
+# 11. Superscript Tag (`<sup>`)
+
+Displays text above normal line.
+
+Syntax:
+
+```html id="sup1"
+x<sup>2</sup>
+```
+
+Output:
+
+x²
+
+Used in:
+
+* maths
+* exponents
+
+---
+
+## Example 1
+
+```html id="sup2"
+2<sup>3</sup>
+```
+
+Output:
+
+2³
+
+---
+
+## Example 2
+
+```html id="sup3"
+(a+b)<sup>2</sup>
+```
+
+Output:
+
+(a+b)²
+
+---
+
+# Combined Example
+
+```html id="combinefmt"
+<h1>Product Details</h1>
+
+<p><strong>Product:</strong> Laptop</p>
+<p><b>Brand:</b> Dell</p>
+<p><i>Model:</i> Inspiron</p>
+<p><em>Latest Version</em></p>
+<p><mark>Special Offer</mark></p>
+<p>Old Price: <del>₹60000</del></p>
+<p>New Price: <ins>₹50000</ins></p>
+<p><small>Offer valid till 31 July</small></p>
+<p>Water formula: H<sub>2</sub>O</p>
+<p>Square: x<sup>2</sup></p>
+```
+
+Output:
+
+Product Details
+
+**Product:** Laptop
+**Brand:** Dell
+*Model:* Inspiron
+*Latest Version* <mark>Special Offer</mark>
+Old Price: <del>₹60000</del>
+New Price: <ins>₹50000</ins> <small>Offer valid till 31 July</small>
+Water formula: H₂O
+Square: x²
+
+---
+
+# Important Difference Table
+
+| Tag        | Purpose           |
+| ---------- | ----------------- |
+| `<b>`      | Bold only         |
+| `<strong>` | Important bold    |
+| `<i>`      | Italic only       |
+| `<em>`     | Emphasized italic |
+| `<u>`      | Underline         |
+| `<mark>`   | Highlight         |
+| `<small>`  | Small text        |
+| `<del>`    | Deleted text      |
+| `<ins>`    | Inserted text     |
+| `<sub>`    | Below line        |
+| `<sup>`    | Above line        |
+
+---
+
+# Best Practices
+
+Use:
+
+`<strong>` instead of `<b>` when important.
+
+Use:
+
+`<em>` instead of `<i>` when emphasis matters.
+
+Use `<del>` + `<ins>` together for updates.
+
+Use `<sub>` in chemistry.
+
+Use `<sup>` in maths.
+
+Avoid unnecessary underline.
+
+---
+
+# Revision Notes
+
+Formatting tags:
+
+* b
+* strong
+* i
+* em
+* u
+* mark
+* small
+* del
+* ins
+* sub
+* sup
+
+Semantic tags:
+strong, em
+
+Visual-only tags:
+b, i, u
+
+Important:
+sub = below
+sup = above
+
+---
+
+
+-->
