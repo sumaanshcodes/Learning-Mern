@@ -1,0 +1,570 @@
+<!-- 
+ 
+# Chapter 4 — Basic Structure of HTML (Deep Dive)
+
+Now we start the actual structure of HTML.
+
+This chapter is one of the most important chapters because every HTML file follows this structure.
+
+Think:
+Before building a house, you need a blueprint.
+
+Same:
+Before building a webpage, you need HTML structure.
+
+Every page in React, Next.js, Node.js eventually renders HTML.
+
+So understand this deeply.
+
+---
+
+# Basic HTML Structure
+
+Example:
+
+```html id="h3x7kp"
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Webpage</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+</body>
+</html>
+```
+
+This is the skeleton of every webpage.
+
+Let’s break it line by line.
+
+---
+
+# 1. `<!DOCTYPE html>`
+
+First line.
+
+Example:
+
+```html id="u8m2qw"
+<!DOCTYPE html>
+```
+
+Question:
+Is it a tag?
+
+Answer:
+No.
+
+Important.
+
+It is a declaration.
+
+It tells browser:
+
+"This document uses HTML5."
+
+Without it:
+Browser may enter quirks mode (old rendering behavior).
+
+Think:
+It tells browser what rules to follow.
+
+Like:
+
+Exam instructions before exam starts.
+
+Same idea.
+
+Always write it at top.
+
+Rule:
+Must be first line.
+
+---
+
+# 2. `<html>` Tag
+
+Example:
+
+```html id="p6n4rv"
+<html>
+</html>
+```
+
+This is the root element.
+
+Everything comes inside it.
+
+It wraps the entire webpage.
+
+Think:
+Biggest container.
+
+Structure:
+
+```html id="f9x3ts"
+<html>
+   all content here
+</html>
+```
+
+Without it:
+Document is incomplete.
+
+---
+
+## Language Attribute
+
+Usually:
+
+```html id="g2q8wl"
+<html lang="en">
+```
+
+`lang` tells the language.
+
+Examples:
+
+English:
+
+```html id="n7v1mk"
+<html lang="en">
+```
+
+Hindi:
+
+```html id="r4z6pb"
+<html lang="hi">
+```
+
+French:
+
+```html id="k9m2dx"
+<html lang="fr">
+```
+
+Why important?
+
+* SEO
+* Accessibility
+* Screen readers
+
+Always use it.
+
+Best practice:
+
+```html id="w1y8ce"
+<html lang="en">
+```
+
+---
+
+# 3. `<head>` Tag
+
+Example:
+
+```html id="q5u3jn"
+<head>
+</head>
+```
+
+This stores metadata.
+
+Important:
+Content inside head is usually not visible on webpage.
+
+It contains:
+
+* title
+* meta tags
+* CSS links
+* favicon
+* scripts
+
+Think:
+Brain settings.
+
+Not visible but important.
+
+Example:
+
+```html id="m8d2qa"
+<head>
+    <title>Portfolio</title>
+</head>
+```
+
+Visible where?
+
+Browser tab.
+
+Not webpage.
+
+---
+
+# 4. `<title>` Tag
+
+Example:
+
+```html id="x4k7lp"
+<title>My Website</title>
+```
+
+Defines webpage title.
+
+Shows in browser tab.
+
+Example:
+
+If title is:
+
+```html id="c9w1su"
+<title>Instagram</title>
+```
+
+Tab shows:
+Instagram
+
+Important for:
+
+* SEO
+* user identification
+* bookmarking
+
+Bad:
+
+```html id="v6n8er"
+<title>Document</title>
+```
+
+Good:
+
+```html id="z2p5tm"
+<title>Sumansh Portfolio</title>
+```
+
+Always meaningful.
+
+---
+
+# 5. `<body>` Tag
+
+Example:
+
+```html id="j8r3xv"
+<body>
+</body>
+```
+
+This is the visible part of webpage.
+
+Everything user sees comes here.
+
+Examples:
+
+* text
+* images
+* buttons
+* forms
+* videos
+* links
+
+Example:
+
+```html id="l5q7cn"
+<body>
+    <h1>Hello</h1>
+    <p>Welcome</p>
+</body>
+```
+
+Visible.
+
+---
+
+Difference:
+
+Head = hidden info
+
+Body = visible content
+
+Important.
+
+---
+
+# Visual Structure
+
+```text id="t3n9mw"
+HTML Document
+│
+├── DOCTYPE
+│
+└── html
+    │
+    ├── head
+    │   ├── title
+    │   ├── meta
+    │   └── link
+    │
+    └── body
+        ├── h1
+        ├── p
+        └── img
+```
+
+Understand this tree.
+
+This is the document structure.
+
+---
+
+# Real Example 1
+
+```html id="d7v2pk"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Profile</title>
+</head>
+<body>
+    <h1>Sumansh Yadav</h1>
+    <p>Backend Developer</p>
+</body>
+</html>
+```
+
+Output:
+
+Tab:
+My Profile
+
+Page:
+Sumansh Yadav
+Backend Developer
+
+---
+
+# Real Example 2 (with more body content)
+
+```html id="k2m8qx"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Info</title>
+</head>
+<body>
+    <h1>Name: Sumansh</h1>
+    <p>College: GLA University</p>
+    <p>Branch: AI & FullStack</p>
+</body>
+</html>
+```
+
+This is complete valid HTML.
+
+---
+
+# Important Concepts
+
+---
+
+## Opening Tag
+
+Example:
+
+```html id="p4w9ne"
+<h1>
+```
+
+Starts element.
+
+---
+
+## Closing Tag
+
+Example:
+
+```html id="u6x2mr"
+</h1>
+```
+
+Ends element.
+
+Slash means closing.
+
+---
+
+## Content
+
+Example:
+
+```html id="y8q3ld"
+<h1>Hello</h1>
+```
+
+Content:
+Hello
+
+---
+
+## Element
+
+Whole thing:
+
+```html id="c3t7va"
+<h1>Hello</h1>
+```
+
+This complete structure is element.
+
+---
+
+# Nested Elements
+
+Elements inside elements.
+
+Example:
+
+```html id="r9v1zk"
+<body>
+    <div>
+        <p>Hello</p>
+    </div>
+</body>
+```
+
+Here:
+
+* p inside div
+* div inside body
+
+This is nesting.
+
+Very common.
+
+---
+
+# Common Beginner Mistakes
+
+---
+
+## Mistake 1: Missing DOCTYPE
+
+Wrong:
+
+```html id="n2k6qw"
+<html>
+```
+
+Correct:
+
+```html id="b7r4xp"
+<!DOCTYPE html>
+<html>
+```
+
+---
+
+## Mistake 2: Writing content in head
+
+Wrong:
+
+```html id="m5x8ua"
+<head>
+   <h1>Hello</h1>
+</head>
+```
+
+Head is not for visible content.
+
+Correct:
+
+```html id="q1z9tv"
+<body>
+   <h1>Hello</h1>
+</body>
+```
+
+---
+
+## Mistake 3: Forgetting title
+
+Wrong:
+
+No title.
+
+Correct:
+
+```html id="w8p4cs"
+<title>Homepage</title>
+```
+
+---
+
+# Best Practice Structure
+
+Use Emmet:
+
+Type:
+
+```text id="j4m7yk"
+!
+```
+
+Press Enter.
+
+Generated:
+
+```html id="f6q2xd"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+```
+
+This is standard modern structure.
+
+We will study meta tags later.
+
+---
+
+# Revision Notes
+
+Structure:
+
+DOCTYPE → html → head → body
+
+DOCTYPE:
+Tells HTML version
+
+html:
+Root element
+
+head:
+Hidden info
+
+title:
+Browser tab name
+
+body:
+Visible content
+
+Important:
+
+* Proper nesting
+* Opening tag
+* Closing tag
+* Elements
+* Content
+
+---
+
+-->
