@@ -1,0 +1,611 @@
+<!--
+
+# Chapter 7 — Anchor Tag (`<a>`) Complete Deep Dive
+
+The anchor tag is one of the most important tags in HTML.
+
+Without links, the web would not exist.
+
+The entire internet works because pages connect to other pages.
+
+Example:
+When you click on Google and open YouTube, you are using links.
+
+That is why HTML stands for **HyperText** Markup Language.
+
+HyperText = linked documents.
+
+---
+
+# 1. What is Anchor Tag?
+
+Anchor tag is used to create hyperlinks.
+
+Syntax:
+
+```html id="a1"
+<a href="URL">Link Text</a>
+```
+
+Example:
+
+```html id="a2"
+<a href="https://www.google.com">Visit Google</a>
+```
+
+Output:
+
+A clickable link:
+Visit Google
+
+When clicked → opens Google.
+
+---
+
+# Structure of Anchor Tag
+
+Example:
+
+```html id="a3"
+<a href="https://example.com">Click Here</a>
+```
+
+Breakdown:
+
+`<a>` = anchor tag
+`href` = destination
+`Click Here` = visible text
+
+Important:
+
+`href` means **Hypertext Reference**
+
+It tells where to go.
+
+Without href:
+
+```html id="a4"
+<a>Click Me</a>
+```
+
+Not useful.
+
+---
+
+# 2. External Links
+
+Links to another website.
+
+Example:
+
+```html id="ex1"
+<a href="https://www.google.com">Google</a>
+```
+
+Output:
+
+Google → opens Google
+
+---
+
+## Example 1
+
+```html id="ex2"
+<a href="https://www.youtube.com">YouTube</a>
+```
+
+Output:
+
+YouTube → opens YouTube
+
+---
+
+## Example 2
+
+```html id="ex3"
+<a href="https://github.com">GitHub</a>
+```
+
+Output:
+
+GitHub → opens GitHub
+
+---
+
+Important:
+
+Always include full URL:
+
+Correct:
+
+```html id="ex4"
+<a href="https://github.com">GitHub</a>
+```
+
+Wrong:
+
+```html id="ex5"
+<a href="github.com">GitHub</a>
+```
+
+---
+
+# 3. Internal Links
+
+Links within your own website.
+
+Example:
+
+Files:
+
+```text id="files1"
+index.html
+about.html
+contact.html
+```
+
+Link:
+
+```html id="int1"
+<a href="about.html">About</a>
+```
+
+Output:
+
+Click → opens about page.
+
+---
+
+## Example 1
+
+```html id="int2"
+<a href="contact.html">Contact Us</a>
+```
+
+Output:
+
+Opens contact page.
+
+---
+
+## Example 2
+
+Folder structure:
+
+```text id="files2"
+project/
+   index.html
+   pages/
+      services.html
+```
+
+Link:
+
+```html id="int3"
+<a href="pages/services.html">Services</a>
+```
+
+Output:
+
+Opens services page.
+
+---
+
+Important for multi-page websites.
+
+---
+
+# 4. Target Attribute
+
+Controls where link opens.
+
+Syntax:
+
+```html id="t1"
+<a href="URL" target="value">Link</a>
+```
+
+---
+
+## `_self` (default)
+
+Opens in same tab.
+
+Example:
+
+```html id="t2"
+<a href="https://www.google.com" target="_self">Google</a>
+```
+
+Output:
+Same tab.
+
+---
+
+## `_blank`
+
+Opens in new tab.
+
+Example:
+
+```html id="t3"
+<a href="https://www.google.com" target="_blank">Google</a>
+```
+
+Output:
+New tab.
+
+Very common.
+
+---
+
+## Example 1
+
+```html id="t4"
+<a href="https://github.com" target="_blank">GitHub</a>
+```
+
+---
+
+## Example 2
+
+```html id="t5"
+<a href="about.html" target="_self">About</a>
+```
+
+---
+
+Best practice:
+
+Use `_blank` for external links.
+
+---
+
+# 5. Email Links
+
+Used to open email app.
+
+Syntax:
+
+```html id="mail1"
+<a href="mailto:example@gmail.com">Send Email</a>
+```
+
+Output:
+
+Click → opens email app.
+
+---
+
+## Example 1
+
+```html id="mail2"
+<a href="mailto:sumansh@gmail.com">Email Me</a>
+```
+
+---
+
+## Example 2
+
+```html id="mail3"
+<a href="mailto:support@company.com">Contact Support</a>
+```
+
+---
+
+Useful in portfolios.
+
+---
+
+# 6. Phone Links
+
+Used to make calls.
+
+Syntax:
+
+```html id="phone1"
+<a href="tel:9876543210">Call Now</a>
+```
+
+Output:
+
+Click → calls number.
+
+Works mainly on mobile.
+
+---
+
+## Example 1
+
+```html id="phone2"
+<a href="tel:+919876543210">Call Me</a>
+```
+
+---
+
+## Example 2
+
+```html id="phone3"
+<a href="tel:+911234567890">Support</a>
+```
+
+---
+
+Useful for business websites.
+
+---
+
+# 7. Download Links
+
+Downloads files.
+
+Syntax:
+
+```html id="down1"
+<a href="resume.pdf" download>Download Resume</a>
+```
+
+Output:
+Downloads file.
+
+---
+
+## Example 1
+
+```html id="down2"
+<a href="notes.pdf" download>Download Notes</a>
+```
+
+---
+
+## Example 2
+
+```html id="down3"
+<a href="image.jpg" download>Download Image</a>
+```
+
+---
+
+Very useful in portfolio.
+
+---
+
+# 8. Bookmark Links (Page Navigation)
+
+Used to jump inside same page.
+
+Very important.
+
+Step 1: Create target.
+
+```html id="bm1"
+<h2 id="about">About Section</h2>
+```
+
+Step 2: Link to it.
+
+```html id="bm2"
+<a href="#about">Go to About</a>
+```
+
+Output:
+Scrolls to About section.
+
+---
+
+## Example 1
+
+```html id="bm3"
+<h1 id="top">Top</h1>
+<a href="#top">Go Top</a>
+```
+
+---
+
+## Example 2
+
+```html id="bm4"
+<h2 id="contact">Contact</h2>
+<a href="#contact">Jump to Contact</a>
+```
+
+---
+
+Useful for long pages.
+
+---
+
+# 9. Image as Link
+
+You can make images clickable.
+
+Example:
+
+```html id="imglink1"
+<a href="https://www.google.com">
+    <img src="logo.png" alt="Logo">
+</a>
+```
+
+Output:
+Click image → opens Google.
+
+---
+
+## Example 1
+
+Logo click.
+
+---
+
+## Example 2
+
+Product image click.
+
+Common in e-commerce.
+
+---
+
+# 10. Title Attribute
+
+Shows tooltip.
+
+Example:
+
+```html id="title1"
+<a href="https://www.google.com" title="Open Google">Google</a>
+```
+
+Output:
+Hover → shows tooltip.
+
+---
+
+## Example 1
+
+```html id="title2"
+<a href="about.html" title="About Us">About</a>
+```
+
+---
+
+## Example 2
+
+```html id="title3"
+<a href="contact.html" title="Contact Page">Contact</a>
+```
+
+---
+
+Improves UX.
+
+---
+
+# Combined Example
+
+```html id="combineanchor"
+<h1>My Portfolio</h1>
+
+<a href="about.html">About</a><br>
+<a href="contact.html">Contact</a><br>
+
+<a href="https://github.com" target="_blank">GitHub</a><br>
+
+<a href="mailto:sumansh@gmail.com">Email Me</a><br>
+
+<a href="tel:+919876543210">Call Me</a><br>
+
+<a href="resume.pdf" download>Download Resume</a>
+```
+
+Output:
+
+About
+Contact
+GitHub
+Email Me
+Call Me
+Download Resume
+
+Each performs different action.
+
+---
+
+# Common Mistakes
+
+---
+
+## Mistake 1: Missing href
+
+Wrong:
+
+```html id="mist1a"
+<a>Click</a>
+```
+
+Correct:
+
+```html id="mist1b"
+<a href="#">Click</a>
+```
+
+---
+
+## Mistake 2: Wrong path
+
+Wrong:
+
+```html id="mist2a"
+<a href="page.html">Page</a>
+```
+
+When file doesn’t exist.
+
+Check paths.
+
+---
+
+## Mistake 3: Forgetting target="_blank"
+
+External links often should open new tab.
+
+---
+
+## Mistake 4: Wrong mail format
+
+Wrong:
+
+```html id="mist4a"
+<a href="sumansh@gmail.com">
+```
+
+Correct:
+
+```html id="mist4b"
+<a href="mailto:sumansh@gmail.com">
+```
+
+---
+
+# Important Attributes of `<a>`
+
+| Attribute | Purpose       |
+| --------- | ------------- |
+| href      | destination   |
+| target    | where to open |
+| title     | tooltip       |
+| download  | download file |
+
+---
+
+# Revision Notes
+
+Anchor tag creates links.
+
+Types:
+
+* External links
+* Internal links
+* Email links
+* Phone links
+* Download links
+* Bookmark links
+
+Important:
+
+href = destination
+
+target:
+
+* _self
+* _blank
+
+Special:
+
+mailto:
+tel:
+#id
+
+Very important in web development.
+
+--->
